@@ -1,0 +1,10 @@
+.DS_Store
+
+# ── Agent / authoring material — local only, never committed ─────────────────
+# CLAUDE.md and AGENTS.md are safe at the root: the walker drops them by name (REPO_FURNITURE).
+# _docs/ needs its underscore — the repo root IS the book, so a plain docs/ would render every
+# file in it as a phantom lesson.
+CLAUDE.md
+AGENTS.md
+_docs/
+.idea/

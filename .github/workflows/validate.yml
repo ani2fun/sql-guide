@@ -1,0 +1,27 @@
+name: validate
+
+# The book has to render before it is merged. This runs the SERVER'S walker, so the gate and the
+# site agree by construction rather than by review.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: book
+      - uses: actions/checkout@v4
+        with:
+          repository: ani2fun/synapse
+          path: synapse
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: synapse
+      - name: validate-book
+        working-directory: synapse
+        run: ./dev-tools/validate-book ../book
