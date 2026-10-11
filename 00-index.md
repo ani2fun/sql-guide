@@ -204,4 +204,4 @@ SQL is a standard. SQL implementations are not. PostgreSQL, MySQL/MariaDB, SQLit
 
 When a chapter shows a query that doesn't work the same on SQLite, MySQL, or T-SQL, it'll say so inline. You don't need to know all four dialects to read this book — but when you change jobs and inherit a MySQL stack, you'll have a map of where the bumps are.
 
-> **Why not start with SQLite, since the codefolio dev environment ships an in-memory SQLite for the cortex playground?** Because the gap between SQLite's "good-enough" SQL and what production engines actually do is the gap between toy code and shipped code. We use Postgres in this book and let SQLite catch up where it can.
+> **Why not start with SQLite, since the codefolio dev environment ships an in-memory SQLite for the synapse playground?** Because the gap between SQLite's "good-enough" SQL and what production engines actually do is the gap between toy code and shipped code. We use Postgres in this book and let SQLite catch up where it can.
